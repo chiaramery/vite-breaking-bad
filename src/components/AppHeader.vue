@@ -22,10 +22,14 @@ header {
     width: 100%;
 
     .wrapper {
-        width: 100%;
+        width: 90%;
+        margin: 1em auto;
         padding: 1.5em;
         display: flex;
         align-items: center;
+        background-color: white;
+        box-shadow: 5px 10px black;
+
 
         .logo {
             margin-right: 1em;
@@ -33,7 +37,7 @@ header {
         }
 
         .title {
-            color: white;
+            color: rgb(47 59 70);
         }
     }
 

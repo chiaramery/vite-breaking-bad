@@ -1,8 +1,12 @@
 <script>
 import { store } from "../store";
+import ResultCharacters from "./ResultCharacters.vue";
 
 export default {
     name: "AppCard",
+    components: {
+        ResultCharacters,
+    },
     data() {
         return {
             store
@@ -12,11 +16,7 @@ export default {
 </script>
 
 <template>
-    <div class="large-container">
-        <div class="founder">
-            <h5>Found 62 characters</h5>
-        </div>
-    </div>
+    <ResultCharacters />
     <section class="row">
         <div class="card" v-for="character in store.characters" :key="character.char_id">
             <img :src="character.img" alt="">
@@ -30,12 +30,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.founder {
-    padding: .6em;
-    color: white;
-    background-color: rgb(47 59 70);
-}
-
 .row {
     margin-top: .5em;
     gap: 5px;
