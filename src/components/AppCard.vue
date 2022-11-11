@@ -1,7 +1,6 @@
 <script>
 import { store } from "../store";
 import ResultCharacters from "./ResultCharacters.vue";
-
 export default {
     name: "AppCard",
     components: {
@@ -23,7 +22,8 @@ export default {
             <h2>{{ character.name.toUpperCase() }}</h2>
             <div class="paragraph">
                 <p>{{ character.category }}</p>
-                <p>{{ character.status}}</p>
+                <p>{{ character.status }}</p>
+                <p> Nickname: {{ character.nickname }}</p>
             </div>
         </div>
     </section>
@@ -54,10 +54,13 @@ export default {
         }
 
         .paragraph {
-            padding-top: 1em;
-            color: gray;
-            text-align: center;
-            font-size: .7em;
+            p {
+                padding-top: 1em;
+                color: gray;
+                text-align: center;
+                font-size: .7em;
+            }
+
         }
     }
 }
